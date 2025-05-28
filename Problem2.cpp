@@ -47,7 +47,8 @@ public:
         h = new int[cap];
     }
     void ins(int v) {
-        if (sz >= cap) return;
+        if (sz >= cap) 
+            return;
         h[sz] = v;
         int i = sz++;
         while (i > 0 && h[i] < h[p(i)]) {
@@ -56,7 +57,8 @@ public:
         }
     }
     int remMin() {
-        if (sz == 0) return -1;
+        if (sz == 0) 
+        return -1;
         int m = h[0];
         h[0] = h[--sz];
         heapify(0);
